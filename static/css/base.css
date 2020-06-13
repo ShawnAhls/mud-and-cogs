@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html {
+    height: 100%;
+}
+
+header {
+    font-family: 'Permanent Marker';
+}
+
+
+
+/* Navbar */
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+
+/*  *Image under the the Navbar */
+
+.mountain {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
