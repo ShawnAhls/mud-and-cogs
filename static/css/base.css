@@ -9,7 +9,6 @@ header {
 }
 
 
-
 /* Navbar */
 
 .navbar-brand {
@@ -23,4 +22,31 @@ header {
     height: auto;
     width: auto;
     max-width: 100%;
+}
+
+/* Images in the cards */
+
+.card-img {
+    opacity: 0.6;
+}
+
+.card-title {
+    color: white;
+     font-family: 'Permanent Marker';
+}
+
+/* Footer */
+
+.footer {
+  position: relative;
+  height: 30px;
+  top: 35px;
+  width: 100%;
+  background-color: rgb(180, 180, 180);
+  color: white;
+  text-align: center;
+}
+
+p {
+    margin-bottom: 0;
 }
