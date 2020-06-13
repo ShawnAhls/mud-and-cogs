@@ -24,6 +24,14 @@ header {
     max-width: 100%;
 }
 
+.top-right {
+    color: white;
+    font-family: 'Permanent Marker';
+    position: absolute;
+    top: 220px;
+    right: 100px;
+}
+
 /* Images in the cards */
 
 .card-img {
