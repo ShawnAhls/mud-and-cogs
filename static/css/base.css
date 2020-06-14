@@ -4,6 +4,10 @@ html {
     height: 100%;
 }
 
+body {
+    height: 100%;
+}
+
 header {
     font-family: 'Permanent Marker';
 }
@@ -40,14 +44,27 @@ header {
 
 .card-title {
     color: white;
-     font-family: 'Permanent Marker';
+    font-family: 'Permanent Marker';
+}
+
+
+/* Gear cards */
+/* Title */
+
+h2 {
+    text-align: center;
+    font-family: 'Permanent Marker';
+}
+
+.gears {
+    margin: 40px;
 }
 
 /* Footer */
 
 .footer {
   position: relative;
-  height: 30px;
+  height: 50px;
   top: 35px;
   width: 100%;
   background-color: rgb(180, 180, 180);
