@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'gears',
     'brakes',
+    'tires',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'gears/templates/home/index.html'),
             os.path.join(BASE_DIR, 'brakes/templates/home/index.html'),
+            os.path.join(BASE_DIR, 'tires/templates/home/index.html'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
