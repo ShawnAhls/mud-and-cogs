@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'gears',
+    'brakes',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'gears/templates/home/index.html'),
+            os.path.join(BASE_DIR, 'brakes/templates/home/index.html'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
