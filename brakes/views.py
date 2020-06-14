@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return render(request, "brakes/index.html")
+def brakes(request):
+    return render(request, "brakes/brakes.html")

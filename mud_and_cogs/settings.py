@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
+    'home.apps.HomeConfig',
     'gears',
     'brakes',
     'tires',
@@ -60,9 +60,10 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'gears/templates/home/index.html'),
-            os.path.join(BASE_DIR, 'brakes/templates/home/index.html'),
-            os.path.join(BASE_DIR, 'tires/templates/home/index.html'),
+            os.path.join(BASE_DIR, 'templates', 'home'),
+            os.path.join(BASE_DIR, 'templates', 'gears'),
+            os.path.join(BASE_DIR, 'templates', 'brakes'),
+            os.path.join(BASE_DIR, 'templates', 'tires'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
