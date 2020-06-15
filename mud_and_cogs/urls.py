@@ -7,4 +7,5 @@ urlpatterns = [
     path('gears/', include('gears.urls')),
     path('brakes/', include('brakes.urls')),
     path('tires/', include('tires.urls')),
+    path('basket/', include('basket.urls')),
 ]
