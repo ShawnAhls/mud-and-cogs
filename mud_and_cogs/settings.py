@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'brakes',
     'tires',
     'basket',
+    'register',
 ]
 
 MIDDLEWARE = [

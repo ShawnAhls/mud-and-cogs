@@ -8,4 +8,5 @@ urlpatterns = [
     path('brakes/', include('brakes.urls')),
     path('tires/', include('tires.urls')),
     path('basket/', include('basket.urls')),
+    path('register/', include('register.urls')),
 ]
