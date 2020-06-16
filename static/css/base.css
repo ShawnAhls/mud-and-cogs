@@ -75,3 +75,13 @@ h2 {
 p {
     margin-bottom: 0;
 }
+
+/* Basket */
+
+.basket {
+    margin-top: 100px;
+    margin-bottom: 235px;
+    text-align: center;
+    font-family: 'Permanent Marker';
+    font-size: 150%;
+}
