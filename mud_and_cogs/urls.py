@@ -9,4 +9,5 @@ urlpatterns = [
     path('tires/', include('tires.urls')),
     path('basket/', include('basket.urls')),
     path('register/', include('register.urls')),
+    path('signin/', include('signin.urls')),
 ]
