@@ -24,20 +24,23 @@
             <a class="navbar-brand" href="{% url 'home' %}">Mud & Cogs</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>   
+                </button>  
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
+                        <a class="dropdown-item" href="{% url 'signin' %}">Sign In</a>
+                    </div>
+                </div> 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'signin' %}">Sign In</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'basket' %}"><i class="fas fa-shopping-bag"></i></a>
                         </li>
                     </ul>
-                </div>
+                </div> 
             </nav>
         </section>
         <section>
