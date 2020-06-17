@@ -1,39 +1,231 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<h2>My Yummy Dishes</h2>
 
-Welcome ShawnAhls,
+The My Yummy Dishes website is database website, where an user can view their recipes and that of other users. An user must
+register or Sign in before they are allowed to add, edit or delete recipes. When adding a recipe the user can, if they want to 
+add an image of the recipe they are adding, but if they don't a default image will appear in its place.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the database schema.
 
-## Gitpod Reminders
+<hr/> 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<h3>UX</h3>
 
-`python3 -m http.server`
+<strong>Registration of user</strong> - The user can register themselves by the registration page where they are ask for an username and password.
+                       If an username is already registered a message will appear to inform the user to choose a different 
+                       username. When the user enters their password and misspell their password, a message will appear to inform 
+                       them that their password does not match.
 
-A blue button should appear to click: *Make Public*,
+<strong>Sign in of user</strong> - The user can click on the Sign in button, which will take them to the sign in page and sign themselves in by
+                  filling in the sign in form. If the user does not exists they will be redirected to the registration page to
+                  register themselves. The user can sign in with their details and if the user misspell his username or password,
+                  a message will appear to inform them that their details does not match.
 
-Another blue button should appear to click: *Open Browser*.
+<strong>Sign out of user</strong> - Once user has singed in and has used the website and they want to leave after cooking an amazing meal, adding,
+                   editing or deleting of an recipe; the user can click on the Sign out button which will appear if they are signed in.
+                   By clicking on the sign out button the user session will end.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<strong>Viewing of recipe</strong> - An user can click on the recipes name that is displayed on the home page, that will take them to that recipe only.
+                    If the user wants to view any other recipe they need to click on the Category and all the recipes under that category
+                    will appear on the category recipe page.
 
-A blue button should appear to click: *Make Public*,
+<strong>Add a recipe</strong> - Once the user has signed in and wants to add their favourite recipe their can do that by clicking on the Add recipe button,
+               which takes them to the add recipe page. Here a user can fill in a form which consists of the category, recipes name,
+               image of recipe, Ingredients, Method, prep-time, cooking time and serving how many people.
 
-Another blue button should appear to click: *Open Browser*.
+<strong>Edit a recipe</strong> - Once the user has signed in and wants to edit their favourite recipe their can do that by clicking on the edit button which 
+                takes them to the edit recipe page. Here a user can fill in a form which consists of the category, recipes name , image of recipe,
+                Ingredients, Method, prep-time, cooking time and serving how many people.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+<strong>Delete recipe</strong> - If an user decides to delete a reicpe, they can do so by clicking on the delete button and that recipe will be deleted from
+                the database. Then a message will appear stating the recipe has been deleted. 
 
-## Updates Since The Instructional Video
+<hr/> 
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+<h3>Design</h3>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I have used the a program called Figma that helped design the pages and this makes them easy to use and keeps them uncluttered.
+The user can see and read everything clearly without having to do an indepth search for what the are looking for. The approach to the design was to make
+the website easy to navigate and inviting so anyone can use this with ease.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Please <a href="static/creations/Images/My-Yummy-Dishes.pdf">Click Here</a> to see the design.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<hr/> 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<h3>Features</h3>
 
---------
+<ul>
+    <li>Dropdown menu for all the categories.</li>
+    <li>Registration and Sign in links for the user to register or sign in.</li>
+    <li>On the home page an Add recipe link for the user to add more recipes to the database.</li>
+    <li>The ability for the user to edit and delete recipes on the database.</li>
+    <li>Each recipe can be displayed on their own page, to list everything about the recipe.</li>
+</ul>    
 
-Happy coding!
+<hr/> 
+
+<h3>Technology</h3>
+
+<h4>Langauges</h4>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>: was used for the rendering of the template design.</li>
+        <li><a href="https://www.w3schools.com/css/">CSS3</a>: was used for the rendering of the template style.</li>
+        <li><a href="https://www.python.org/">Python</a>: was used for the rendering of the application logic.</li>
+    </ul>
+<h4>Database</h4>
+    <ul>
+        <a href="https://www.mongodb.com/">MongoDB</a>: was used for the database.
+    </ul>   
+<h4>Frameworks</h4>
+    <ul>
+        <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>: was used for creating routes and the rendering of the HTML5 templates.</li>
+        <li><a href="https://getbootstrap.com/">Bootstrap</a>: was used for the navigation, login templates and responsiveness.</li>
+    </ul>
+<h4>Tools</h4>
+    <ul>
+        <li><a href="https://git-scm.com/">GitHub/Gitpod</a>: was used for writing up all the code.</li>
+        <li><a href="https://www.figma.com/">Figma</a>: was used for the design layout of the website.</li>
+        <li><a href="https://www.heroku.com/">Heroku</a>: was used for the deployment of the website.</li>
+    </ul>
+<h4>Testing</h4>
+    <ul>
+        <a href="https://en.wikipedia.org/wiki/Unit_testing">Unittest</a>: was used for the individual testing of each route.
+    </ul>
+
+<hr/>
+
+<h3>Testing<h3>
+
+<h4>Validation of Code</h4>
+
+With the validation of the code using the following two validation sites. Using W3C validation all the HTML that was written was correct, but all the Flask
+inputs come up with errors. As this is not part the HTML5 language. Using the W3C CSS validation for the CSS3 that was written, the result was No Errors Found.
+
+<h4>Automated Testing</h4>
+
+Created a test.py file to test each route that was created in the app.py file. The test.py file uses the unittest that runs each route, when the following 
+is entered in a terminal python3 test.py. Once that is entered the unittest will run.
+
+<h4>Manual Testing</h4>
+<ol>
+    <li>
+        <h5>Responsive</h5>
+        <ul>
+            <li>
+            Used Chrome dev tools and to test the responsiveness of the wed site. When resizing the screen from 4k screen, laptop, tablet and iphone
+            and is responding correctly. Did test if the website will work on other browsers and loaded up correctly.
+            </li>    
+        </ul>
+    </li>
+    <li>
+        <h5>Sign In</h5>
+            <h6>Correct User details</h6>
+            <ul>
+                <li>
+                Clicked on the Sign In link,
+                Sign in page loaded up and entered in my username and password,
+                The Sign in page will redirected to the Home page.
+                </li>    
+            </ul>
+            <h6>Incorrect User details</h6>
+            <ul>
+                <li>
+                Clicked on the Sign In link,
+                Sign in page loaded up and entered in my username and incorrect password,
+                The Sign In page prompt a message inform the user that their details are incorrect.
+                The page will not redirect to any other page.
+                </li>    
+            </ul>
+    </li>
+    <li>
+        <h5>Registration</h5>
+            <h6>Correct User details</h6>
+            <ul>
+                <li>
+                Clicked on the Registration link,
+                Registration page loaded up and entered in my username and password,
+                A confirmation password is required to compare passwords,
+                The Registration page will redirected to the Home page.
+                </li>    
+            </ul>
+            <h6>Incorrect User details</h6>
+            <ul>
+                <li>
+                Clicked on the Registration link,
+                Registration page loaded up and entered in my username and password,
+                A confirmation password is required to compare passwords,
+                If passwords does not match a message will prompt the user their passwrods does not match.
+                The Registration page will not redirect to any other page.
+                </li>    
+            </ul>
+    </li>
+    <li>
+        <h5>Add Recipe</h5>
+            <ul>
+                <li>
+                Clicked on the Add recipe link,
+                Add recipe page loaded up and allows you to enter the new recipe details,
+                Submitted the from blank and the page does request you to fill in the from,
+                Filled out the from and submitted the from,
+                Add recipe page will redirect you to the display recipes page,
+                Opened the recipe and the whole from was filled out.
+                </li>    
+            </ul>
+    </li>
+    <li>
+        <h5>Edit Recipe</h5>
+            <ul>
+                <li>
+                Clicked on the Edit recipe button,
+                Edit recipe page loaded up and allows you to enter the new details to a recipe and the recipe is already populated,
+                Filled out the from and submitted the from,
+                Edit recipe page will redirect you to the display recipes page.
+                Opened the recipe and the whole from was filled out.
+                </li>    
+            </ul>
+    </li>
+    <li>
+        <h5>Delete Recipe</h5>
+            <ul>
+                <li>
+                Clicked on the Delete recipe button,
+                The recipe is deleted form the database,
+                The Delete recipe page will redirect you to the display recipe page,
+                A message will appear stating the recipe has been deleted.
+                </li>    
+            </ul>
+    </li>
+    <li>
+        <h5>Sign Out</h5>
+            <ul>
+                <li>
+                Clicked on the Sign out link,
+                The Sign Out will redirect you to the Home page,
+                A message will appear stating You have been Signed Out! Good Bye.
+                </li>    
+            </ul>
+    </li> 
+</ol>
+
+<hr/>
+
+<h4>Deployment</h4>
+
+I used the Heroku app to deploy my application and I deployed in the following way:
+<ol>
+    <li>I created my app under my-yummy-dishes</li>
+    <li>Create a Heroku remote</li>
+    <li>Create a Profile and requirements file</li>
+    <li>Pushed my new project to Heroku</li>
+    <li>Create a web process using heroku ps:scale web=1 in the terminal</li>
+    <li>Set my config vars IP 0.0.0.0 and the PORT 8080</li>
+    <li>Set my MONGO_URI in config vars</li>
+    <li>Refershed my dyno's</li>
+    <li>Opened my app the see if the app is working correctly</li>
+</ol>    
+
+<hr/>
+
+<h4>Acknowledgements</h4>
+
+The recipes I used was from the BBC recipe website and everyone on the Slack that gave me so much advise. 
+YOUTUBE - PrettyPrint for all his video's how to work with flask, python and MongoDB. 
