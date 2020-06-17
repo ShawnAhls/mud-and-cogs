@@ -10,4 +10,5 @@ urlpatterns = [
     path('basket/', include('basket.urls')),
     path('register/', include('register.urls')),
     path('signin/', include('signin.urls')),
+    path('products/', include('products.urls')),
 ]
