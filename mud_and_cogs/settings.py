@@ -62,6 +62,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'templates', 'tires/tires.html'),
             os.path.join(BASE_DIR, 'templates', 'basket/basket.html'),
             os.path.join(BASE_DIR, 'templates', 'signin/signin.html'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
