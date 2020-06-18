@@ -11,4 +11,5 @@ urlpatterns = [
     path('register/', include('register.urls')),
     path('signin/', include('signin.urls')),
     path('products/', include('products.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
