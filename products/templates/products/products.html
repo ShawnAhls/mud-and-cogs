@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc" class="card-img products" alt="...">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc" class="card-img img-thumbnail products" alt="...">
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -25,8 +25,26 @@
                 <h4 class="card-text"><strong>£57.99</strong></h4>
                 <hr>
                 <div class="quantity">
-                    
-                
+                    <h5>Quantity</h5>
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="quantity" value="1" min="1" max="99" data-item_id="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'home' %}" class="btn btn-black">
+                                    <span class="">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-black" value="Add to Basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
