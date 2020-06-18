@@ -1,0 +1,5 @@
+[{"pk": 1, "model": "products.product", "fields":
+ {"name": "Shimano SLX M7000 11 Speed Cassette (11-42t)",
+ "description": "Shimano's SLX M7000 mountain bike cassette brings you sprockets that are enhanced with Hyperglide technology. The advanced shaping of the 11-speed sprockets ensures fast and precise gear shifting as you’re tackling technical climbs and cranking up to speed on the flats. Also, its tough, yet lightweight construction consists of an aluminium spider that enhances the stiffness and durability.", 
+ "price": 57.99, "category": 1,
+ "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc"}}]
