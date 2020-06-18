@@ -12,6 +12,9 @@ header {
     font-family: 'Permanent Marker';
 }
 
+h5 {
+    font-family: 'Permanent Marker';
+}
 
 /* Navbar */
 
@@ -104,4 +107,10 @@ p {
 
 .up a {
     color: white;
+}
+
+/* Products */
+
+.products {
+    opacity: 1;
 }
