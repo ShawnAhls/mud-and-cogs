@@ -4,23 +4,27 @@
 
 {% block content %}
 <h2>Drivetrain Components</h2>
+{% for product in products %}
 <section class="container">
     <div class="row gears">
         <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc" class="card-img products" alt="...">
+                        <img src="{{ product.image.url }}" class="card-img products" alt="{{ product.name }}">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'products' %}">Shimano SLX M7000 11 Speed Cassette (11-42t)</a></h5>
-                            <p class="card-text"><strong>£57.99</strong></p>
+                            <h5 class="card-title"><a href="{% url 'products' %}">{{ product.name }}</a></h5>
+                            <p class="card-text"><strong>£{{ product.price }}</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>    
+{% endfor %}        
         <!-- <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
@@ -65,7 +69,6 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-    </div>     
-</section>
+        </div> --->
+
 {% endblock %}

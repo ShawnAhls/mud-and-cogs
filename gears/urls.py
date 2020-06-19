@@ -3,5 +3,5 @@
 # from . import views
 
 # urlpatterns = [
-#     path('<product_id>', views.gears, name="gears")
+#     path('', views.gears, name="gears")
 # ]
