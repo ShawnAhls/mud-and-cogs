@@ -1,5 +1,13 @@
 from django.shortcuts import render
+from .models import Products
 
 
 def products(request):
-    return render(request, "products/products.html")
+
+    products = Products.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, "products/products.html", context)
