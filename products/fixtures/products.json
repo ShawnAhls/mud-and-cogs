@@ -1,5 +1,10 @@
-[{"pk": 1, "model": "products.product", "fields":
+[{"pk": 1, "model": "products.products", "fields":
  {"name": "Shimano SLX M7000 11 Speed Cassette (11-42t)",
- "description": "Shimano's SLX M7000 mountain bike cassette brings you sprockets that are enhanced with Hyperglide technology. The advanced shaping of the 11-speed sprockets ensures fast and precise gear shifting as you’re tackling technical climbs and cranking up to speed on the flats. Also, its tough, yet lightweight construction consists of an aluminium spider that enhances the stiffness and durability.", 
- "price": 57.99, "category": 1,
- "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc"}}]
+  "description": "Shimano's SLX M7000 mountain bike cassette brings you sprockets that are enhanced with Hyperglide technology. The advanced shaping of the 11-speed sprockets ensures fast and precise gear shifting as you’re tackling technical climbs and cranking up to speed on the flats. Also, its tough, yet lightweight construction consists of an aluminium spider that enhances the stiffness and durability.", 
+  "price": 57.99, "category": 1,
+  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRB2rzA-VC-zoFCobDexpTIH9bc_SIg7NC2RP53X90K0v_fDMEjGW_a6gaow9SC7wEneiWqLygxXdI&usqp=CAc"}},
+ {"pk": 2, "model": "products.products", "fields":
+ {"name": "SRAM XX1 Eagle 1x12sp Boost Groupset - DUB",
+  "description": "Podium-proven and favoured by many top-level riders, this silent running drivetrain setup features high-end components for an unrivalled experience. Featuring DUB bottom bracket technology which guarantees an excellent integration of the crank arm, spindle and bottom bracket power transfer and poise through any type of terrain is second to none. Compatible with Boost-sized frames, it works to make sure that no trail every ride is as big and bold as can be.", 
+  "price": 899.99, "category": 1,
+  "image_url": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTuUZazNLIXybznpEs0qxe3xOQ34eKJtOPCYXyxIlz1F0WE4xm89qA6Zo0nSIrIcjxZBI8uscYc_w&usqp=CAc"}}]
