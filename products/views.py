@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Products
 
 
-def products(request):
+def products(request, products_id):
 
-    products = Products.objects.all()
+    products = get_object_or_404(Products, pk=products_id)
 
     context = {
         'products': products,

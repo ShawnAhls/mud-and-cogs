@@ -1,5 +1,5 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 
-def brakes(request):
-    return render(request, "brakes/brakes.html")
+# def brakes(request):
+#     return render(request, "brakes/brakes.html")

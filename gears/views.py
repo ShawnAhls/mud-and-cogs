@@ -1,5 +1,5 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 
-def gears(request):
-    return render(request, "gears/gears.html")
+# def gears(request):
+#     return render(request, "gears/gears.html")

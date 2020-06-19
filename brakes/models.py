@@ -1,7 +1,7 @@
-from django.db import models
+# from django.db import models
 
 
-class Brakes(models.Model):
+# class Brakes(models.Model):
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name

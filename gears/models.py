@@ -1,9 +1,7 @@
-from django.db import models
-
-# Create your models here.
+# from django.db import models
 
 
-class Gears(models.Model):
+# class Gears(models.Model):
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name

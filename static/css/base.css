@@ -17,7 +17,7 @@ header a:hover {
     color: black;
 }
 
-h2,h5,h6 {
+h2,h3,h5,h6 {
     font-family: 'Permanent Marker';
 }
 
@@ -51,7 +51,7 @@ h2,h5,h6 {
 }
 
 .card-title {
-    color: white;
+    color: black;
     font-family: 'Permanent Marker';
 }
 
