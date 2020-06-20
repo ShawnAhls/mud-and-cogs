@@ -11,16 +11,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <img src="{{ product.image.url }}" class="card-img img-thumbnail products" alt="{{ product.name }}">
+            <img src="{{ gear.image.url }}" class="card-img img-thumbnail products" alt="{{ gear.name }}">
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h3 class="card-title"><a href="{% url 'gears' %}">{{ product.name }}</a></h3>
+                <h3 class="card-title"><a href="{% url 'gears' %}">{{ gear.name }}</a></h3>
                 <hr>
                 <h5>Details</h5>
-                    <p>{{ product.description }}</p>
+                    <p>{{ gear.description }}</p>
                 <hr>
-                <h4 class="card-text"><strong>£{{ product.price }}</strong></h4>
+                <h4 class="card-text"><strong>£{{ gear.price }}</strong></h4>
                 <hr>
                 <div class="quantity">
                     <h5>Quantity</h5>
