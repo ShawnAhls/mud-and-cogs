@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <h2>Product Name</h2>  
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ product.image.url }}" class="card-img img-thumbnail products" alt="{{ product.name }}">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title"><a href="{% url 'gears' %}">{{ product.name }}</a></h3>
+                <hr>
+                <h5>Details</h5>
+                    <p>{{ product.description }}</p>
+                <hr>
+                <h4 class="card-text"><strong>£{{ product.price }}</strong></h4>
+                <hr>
+                <div class="quantity">
+                    <h5>Quantity</h5>
+                    <form class="form" action="" method="POST">
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="quantity" value="1" min="1" max="99" data-item_id="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'home' %}" class="btn btn-black">
+                                    <span class="shopping">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-black shopping" value="Add to Basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}

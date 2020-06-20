@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    # 'gears',
+    'gears',
     # 'brakes',
     # 'tires',
     'basket',
@@ -57,7 +57,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'home/home.html'),
-            # os.path.join(BASE_DIR, 'templates', 'gears/gears.html'),
+            os.path.join(BASE_DIR, 'templates', 'gears/gears.html'),
             # os.path.join(BASE_DIR, 'templates', 'brakes/brakes.html'),
             # os.path.join(BASE_DIR, 'templates', 'tires/tires.html'),
             os.path.join(BASE_DIR, 'templates', 'basket/basket.html'),
