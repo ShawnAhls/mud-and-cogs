@@ -21,12 +21,12 @@ def gears(request):
     return render(request, "gears/gears.html", context)
 
 
-# def gear_detail(request, gear_id):
+def gear_detail(request, gear_id):
 
-#     gear = get_object_or_404(Gears, pk=gear_id)
+    gear = get_object_or_404(Gears, pk=gear_id)
 
-#     context = {
-#          'gear': gear,
-#     }
+    context = {
+        'gear': gear,
+    }
 
-#     return render(request, "gears/gear_detail.html", context)
+    return render(request, "gears/gear_detail.html", context)
