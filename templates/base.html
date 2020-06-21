@@ -30,13 +30,13 @@
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Drivetrain Components</a>
+                            <a class="nav-link" href="{% url 'parts' %}?category=drivetrain">Drivetrain Components</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Brakes</a>
+                            <a class="nav-link" href="{% url 'parts' %}?category=brakes">Brakes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tires</a>
+                            <a class="nav-link" href="{% url 'parts' %}?category=tyres">Tyres</a>
                         </li>
                     </ul>
                     <div class="dropdown">
@@ -63,9 +63,6 @@
         </nav>
         <hr>           
     </header>
-    {% if messages %}
-    {% endif %}
-
     {% block content %}
     {% endblock %}
     <div class="footer">

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Parts
+from .models import Parts, Categories
 from django.db.models import Q
 
 
@@ -13,9 +13,15 @@ def parts(request):
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         parts = parts.filter(queries)
 
+    if 'category' in request.GET:
+        categories = request.GET['category']
+        parts = parts.filter(category__name__in=categories)
+        category = Categories.objects.filter(name__in=categories)
+
     context = {
         'parts': parts,
         'lookup': query,
+        'current_category': category,
     }
 
     return render(request, "parts/parts.html", context)

@@ -7,9 +7,13 @@ class Categories(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
 
 class Parts(models.Model):
-    category = models.ForeignKey('Categories', null=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Categories',
+                                 null=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=150)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -17,3 +21,6 @@ class Parts(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = 'Parts'
