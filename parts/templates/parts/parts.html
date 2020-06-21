@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="#">{{ part.name }}</a></h5>
+                            <h5 class="card-title"><a href="{% url 'part_detail' part.id %}">{{ part.name }}</a></h5>
                             <p class="card-text"><strong>£{{ part.price }}</strong></p>
                         </div>
                     </div>
@@ -26,6 +26,5 @@
         </div>
     </div>
 </section>    
-         
        
 {% endblock %}
