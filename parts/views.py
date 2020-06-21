@@ -5,10 +5,11 @@ from django.db.models import Q
 
 def parts(request):
 
-    parts = Parts.object.all()
+    parts = Parts.objects.all()
+    query = None
 
     if 'q' in request.GET:
-        query = request.GET['Q']
+        query = request.GET['q']
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         parts = parts.filter(queries)
 
