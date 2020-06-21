@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'basket',
     'register',
     'signin',
-    # 'parts',
+    'parts',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
