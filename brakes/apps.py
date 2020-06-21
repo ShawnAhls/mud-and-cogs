@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class BrakesConfig(AppConfig):
-    name = 'brakes'
+# class BrakesConfig(AppConfig):
+#     name = 'brakes'

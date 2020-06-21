@@ -7,65 +7,23 @@
 <section class="container">
     <div class="row gears">
         <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
+        {% for brake in brakes %}
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR1AVvJMOvYz82Z_fIltYZjBtEFPQmZzH12eDSUZDpYlCogsygMYyGkyScaqNdn&usqp=CAc" class="card-img products" alt="...">
+                        <img src="{{ brake.image.url }}" class="card-img products" alt="{{ brake.name }}">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'products' %}">SRAM Code RSC Disc Brake</a></h5>
-                            <p class="card-text"><strong>£174.99</strong></p>
+                            <h5 class="card-title"><a href="{% url 'brake_detail' brake.id %}">{{ brake.name }}</a></h5>
+                            <p class="card-text"><strong>£{{ brake.price }}</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
+        {% endfor %}    
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQo40QmWai34AGDqT3GET-SDFRGHI8YbqPJelFVPQDRLXvq_vQpFtodyuP2WtoMGDyQffbInl3E9tA&usqp=CAc" class="card-img products" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'products' %}">Shimano XT RT86 Ice-Tech Disc Brake Rotor</a></h5>
-                            <p class="card-text"><strong>£39.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTRTl_K5SQohpz8DVdLzcEfE6pF4QQvlOddTWxoxd1LGlkHOeAsOvvto5B8D2ofLaVMfqs88TiBBA&usqp=CAc" class="card-img products" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'products' %}">Shimano XTR M9000 Race Disc Brake Caliper</a></h5>
-                            <p class="card-text"><strong>£88.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-        <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRX7UNvi5G678VJH_0F25ofIBeCFophQYM04Yi0gQLEXcxMFRDqtJqVVgvOPkcx&usqp=CAc" class="card-img products" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'products' %}">Shimano RT66 Disc Rotor (6 Bolt)</a></h5>
-                            <p class="card-text"><strong>£22.99</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>     
-</section>
+    </div>
+</section>    
+         
 {% endblock %} -->

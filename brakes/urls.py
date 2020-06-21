@@ -2,5 +2,5 @@
 # from . import views
 
 # urlpatterns = [
-#     path('', views.brakes, name="brakes")
+#     path('', views.tires, name="tires")
 # ]

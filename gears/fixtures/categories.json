@@ -1,3 +1,0 @@
-[{"pk": 1, "model": "products.categories", "fields": {"name": "gears", "friendly_name": "Drivetrain Components"}},
- {"pk": 2, "model": "products.categories", "fields": {"name": "brakes", "friendly_name": "Brakes"}},
- {"pk": 3, "model": "products.categories", "fields": {"name": "tires", "friendly_name": "Tires"}}]

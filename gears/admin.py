@@ -1,5 +1,3 @@
-from django.contrib import admin
-from .models import Gears, Categories
+# from django.contrib import admin
 
-admin.site.register(Gears)
-admin.site.register(Categories)
+# Register your models here.
