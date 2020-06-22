@@ -1,7 +1,7 @@
-<h2>My Yummy Dishes</h2>
+<h2>Mud & Cogs</h2>
 
-The My Yummy Dishes website is database website, where an user can view their recipes and that of other users. An user must
-register or Sign in before they are allowed to add, edit or delete recipes. When adding a recipe the user can, if they want to 
+Mud & Cogs is an ecom website where user can view and purchase mountain bike parts for their mountain bike.
+gister or Sign in before they are allowed to add, edit or delete recipes. When adding a recipe the user can, if they want to 
 add an image of the recipe they are adding, but if they don't a default image will appear in its place.
 
 Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the database schema.
