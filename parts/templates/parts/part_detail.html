@@ -4,22 +4,17 @@
 
 {% block content %}
 <div class="container">
-    <h2>Product Name</h2>  
+    <h2>{{ part.name }}</h2>  
 </div>
-
+<hr>
 <div class="container">
     <div class="row">
-        {% for part in parts %}
         <div class="col-md-4">
-            <img src="{{ part.image.url }}" class="card-img img-thumbnail products" alt="{{ part.name }}">
+            <img src="{{ part.image.url }}" class="card-img img-thumbnail parts" alt="{{ part.name }}">
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h3 class="card-title"><a href="{% url 'parts' part.id %}">{{ part.name }}</a></h3>
-                <hr>
-                <h5>Details</h5>
-                    <p>{{ product.description }}</p>
-                <hr>
+                <h3 class="card-title"><a href="{% url 'parts' %}">{{ part.name }}</a></h3>
                 <h4 class="card-text"><strong>£{{ product.price }}</strong></h4>
                 <hr>
                 <div class="quantity">
@@ -43,10 +38,13 @@
                         </div>
                     </form>
                 </div>
+                <hr>
+                <h5>Details</h5>
+                    <p>{{ part.description }}</p>
+                <hr>
             </div>
         </div>
-        {% endfor %}
+
     </div>
 </div>
-<hr>
 {% endblock %}
