@@ -1,7 +1,8 @@
 <h2>Mud & Cogs</h2>
 
 Mud & Cogs is an ecom website where user can view and purchase mountain bike parts for their mountain bike.
-gister or Sign in before they are allowed to add, edit or delete recipes. When adding a recipe the user can, if they want to 
+The user browse three different parts of the mountain bike, the are: Drivetrain components( gears), Brakes and
+Tyreste recs. When the user has found the part they are looking for, they can add
 add an image of the recipe they are adding, but if they don't a default image will appear in its place.
 
 Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the database schema.
