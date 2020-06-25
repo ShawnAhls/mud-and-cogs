@@ -30,10 +30,10 @@ def parts(request):
 
 def part_detail(request, part_id):
 
-    part_detail = get_object_or_404(Parts, pk=part_id)
+    part = get_object_or_404(Parts, pk=part_id)
 
     context = {
-        'part_detail': part_detail,
+        'part': part,
     }
-
+    
     return render(request, "parts/part_detail.html", context)
