@@ -28,9 +28,9 @@ def parts(request):
     return render(request, "parts/parts.html", context)
 
 
-def part_detail(request):
+def part_detail(request, part_id):
 
-    part_detail = get_object_or_404(parts)
+    part_detail = get_object_or_404(parts, part_id)
 
     context = {
         'part_detail': part_detail,
