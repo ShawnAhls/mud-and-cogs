@@ -1,18 +1,18 @@
 from django.db import models
 
 
-class Categories(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=150)
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Categories'
+        verbose_name_plural = 'Category'
 
 
 class Parts(models.Model):
-    category = models.ForeignKey('Categories',
+    category = models.ForeignKey('Category',
                                  null=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=150)
     description = models.TextField()
