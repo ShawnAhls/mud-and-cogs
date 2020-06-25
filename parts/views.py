@@ -22,18 +22,18 @@ def parts(request):
     context = {
         'parts': parts,
         'lookup': query,
-        'current_category': categories,
+        'categories': categories,
     }
 
     return render(request, "parts/parts.html", context)
 
 
-def part_detail(request, part_id):
+def part_detail(request):
 
-    part = get_object_or_404(Parts, pk=part_id)
+    part_detail = get_object_or_404(parts)
 
     context = {
-        'part': part,
+        'part_detail': part_detail,
     }
 
     return render(request, "parts/part_detail.html", context)

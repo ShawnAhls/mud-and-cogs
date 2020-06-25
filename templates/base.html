@@ -31,16 +31,16 @@
                             <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}?categories=drivetrain,brakes,tyres">All Parts</a>
+                            <a class="nav-link" href="{% url 'parts' %}">All Parts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}?category=drivetrain">Drivetrain Components</a>
+                            <a class="nav-link" href="{% url 'parts' %}">Drivetrain Components</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}?category=brakes">Brakes</a>
+                            <a class="nav-link" href="{% url 'parts' %}">Brakes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}?category=tyres">Tyres</a>
+                            <a class="nav-link" href="{% url 'parts' %}">Tyres</a>
                         </li>
                     </ul>
                     <div class="dropdown">
@@ -55,13 +55,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'basket' %}"><i class="fas fa-shopping-basket"></i></a>
-                            <p> {% if total %}
-                                    £{{ total|floatformat:2 }}
-                                {% else %}
-                                    £0.00
-                                {% endif %}
-                            </p>
+                            <a class="nav-link" href="{% url 'basket' %}"><i class="fas fa-shopping-bag"></i></a>
                         </li>
                     </ul>
                 </div> 
