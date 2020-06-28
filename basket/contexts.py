@@ -4,8 +4,8 @@
 def contents(request):
 
     basket_item = {}
-    total = 0
     part_count = 0
+    total = 0
 
     context = {
         'basket_item': basket_item,
