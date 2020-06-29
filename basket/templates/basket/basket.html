@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
 
@@ -13,11 +14,11 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                <div class="table-responsive">
-                    {{ basket_items }}
-                </div>
+                    <div class="table-responsive">
+                        {{ basket_items }}
+                    </div>
                 {% else %}
-                <p class="basket">Your have an empty basket</p>
+                    <p class="basket">Your have an empty basket</p>
                 {% endif %}
             </div>
         </div>
