@@ -12,8 +12,10 @@
         </div>
         <div class="row">
             <div class="col">
-                {% if basket_item %}
-                <div class="table-responsive"></div>
+                {% if basket_items %}
+                <div class="table-responsive">
+                    {{ basket_items }}
+                </div>
                 {% else %}
                 <p class="basket">Your have an empty basket</p>
                 {% endif %}
