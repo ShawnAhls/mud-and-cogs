@@ -11,13 +11,56 @@
                 <h2>Your Shopping Basket</h2>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive">
-                        {{ basket_items }}
-                         
-                    </div>
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Part Description</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            {% for item in basket_items %}
+                                <tr>
+                                    <td class="py-3 w-50">
+                                        <p><strong>{{ item.part.name }}</strong></p>
+                                    </td>
+                                    <td class="py-3 w-10">
+                                        <p class="my-0">£{{ item.part.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-10">
+                                        <p class="my-0">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3 w-10">
+                                        <p class="my-0">£{{ item.part.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Total: £{{ total|floatformat:2 }}</strong></h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                        <span class="text-uppercase">More Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                        <span class="text-uppercase">Secure Payment</span>
+                                        <span class="icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>        
                 {% else %}
                     <p class="basket">Your have an empty basket</p>
                 {% endif %}
