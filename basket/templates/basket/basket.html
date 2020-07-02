@@ -50,15 +50,19 @@
                                     <td class="py-3 w-10">
                                         <p>£{{ item.part.price }}</p>
                                     </td>
+                                    <td class="">
+                                        <a href="#" class="shopping btn btn-black"><small>Update</small></a>
+                                        <a href="#" class="shopping btn btn-black"><small>Remove</small></a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                             <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Total: £{{ total|floatformat:2 }}</strong></h6>
+                                <td colspan="5" class="pt-5 text-center">
+                                    <h6>Total: £{{ total|floatformat:2 }}</h6>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
+                                <td colspan="5" class="text-center">
                                     <a href="{% url 'home' %}" class="shopping btn btn-black">
                                         <span class="text-uppercase">More Shopping</span>
                                     </a>
