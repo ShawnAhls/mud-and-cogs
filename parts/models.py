@@ -17,6 +17,7 @@ class Parts(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField
     url_of_image = models.URLField(max_length=1100)
 
     def __str__(self):

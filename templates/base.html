@@ -28,19 +28,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <a href="{% url 'home' %}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}">All Parts</a>
+                            <a href="{% url 'parts' %}" class="nav-link">All Parts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}">Drivetrain Components</a>
+                            <a href="{% url 'parts' %}?category=drivetrain" class="nav-link">Drivetrain Components</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}">Brakes</a>
+                            <a href="{% url 'parts' %}?category=brakes" class="nav-link">Brakes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'parts' %}">Tyres</a>
+                            <a href="{% url 'parts' %}?category=tyres" class="nav-link">Tyres</a>
                         </li>
                     </ul>
                     <div class="dropdown">

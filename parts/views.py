@@ -22,7 +22,7 @@ def parts(request):
     context = {
         'parts': parts,
         'lookup': query,
-        'category': categories,
+        'current_ category': categories,
     }
 
     return render(request, "parts/parts.html", context)
