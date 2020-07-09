@@ -160,3 +160,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+FREE_POSTAGE_THRESHOLD = 70
+STANDARD_POSTAGE_PERCENTAGE = 10
