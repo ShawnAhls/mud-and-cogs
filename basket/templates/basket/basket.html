@@ -35,7 +35,7 @@
                                         <p>£{{ item.part.price }}</p>
                                     </td>
                                     <td class="py-3 w-10">
-                                        <form class="form" action="POST" method="">
+                                        <form class="form" action="{% url 'basket' %}" method="POST">
                                             {% csrf_token %}
                                             <div class="form-row">
                                                 <div class="col-12">
@@ -51,8 +51,8 @@
                                     <td class="py-3 w-10">
                                         <p>£{{ item.part.price | add_subtotal:item.quantity }}</p>
                                     </td>
-                                    <td class="">
-                                        <a href="#" class="shopping btn btn-black"><small>Update</small></a>
+                                    <td>
+                                        <a href="{% url 'basket' %}" type="submit" class="shopping btn btn-black"><small>Update</small></a>
                                         <a href="#" class="shopping btn btn-black"><small>Remove</small></a>
                                     </td>
                                 </tr>
