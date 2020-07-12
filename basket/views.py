@@ -17,3 +17,8 @@ def add_to_basket(request, item_id):
 
     request.session['basket'] = basket
     return render(request, "basket/basket.html")
+
+
+def update_qty_basket(request, item_id):
+    request.session['basket'] = basket
+    return render(request, "basket/basket.html")
