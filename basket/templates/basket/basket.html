@@ -59,7 +59,7 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-center">
-                                    <h4>Total: £{{ total|floatformat:2 }}</h4>
+                                    <h4>Total:</h4> <p>£{{ total|floatformat:2 }}</p>
                                 </td>
                             </tr>
                             <tr>
@@ -67,7 +67,7 @@
                                     <a href="{% url 'home' %}" class="shopping btn btn-black">
                                         <span class="text-uppercase">More Shopping</span>
                                     </a>
-                                    <a href="{% url 'payment' %}" class="shopping btn btn-black">
+                                    <a href="{% url 'purchase' %}" class="shopping btn btn-black">
                                         <span class="text-uppercase">Secure Payment</span>
                                         <span class="icon">
                                             <i class="fas fa-credit-card"></i>
