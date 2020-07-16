@@ -1,8 +1,9 @@
 from django.db import models
 from django.db.models import Sum
 from parts.models import Parts
-import uuid
 from django_countries.fields import CountryField
+# from profiles.models import UserProfile
+import uuid
 
 
 class Purchase(models.Model):
@@ -42,12 +43,12 @@ class PurchasePart(models.Model):
     purchase = models.ForeignKey(Purchase, on_delete=models.CASCADE)
     part = models.ForeignKey(Parts, on_delete=models.CASCADE)
     quantity = models.IntegerField
-    purchasepart_total = models.DecimalField(max_digits=6, decimal_places=2,
-                                             editable=False)
+    total = models.DecimalField(max_digits=6, decimal_places=2,
+                                editable=False)
 
     def save(self, *args, **kwargs):
-        self.purchasepart_total = self.part.price * self.quantity
+        self.total = self.part.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'{self.order.order_number}'
+        return f'{self.purchase_number}'
