@@ -1,5 +1,8 @@
 from django.apps import AppConfig
 
 
-class PaymentConfig(AppConfig):
-    name = 'payment'
+class PurchaseConfig(AppConfig):
+    name = 'purchase'
+
+    def ready(self):
+        import purchase.signals
