@@ -14,7 +14,7 @@ class PurchaseAdmin(admin.ModelAdmin):
                        'total', 'original_basket',
                        'stripe_pid')
 
-    fields = ('purchase_number', 'user_profile', 'full_name',
+    fields = ('purchase_number', 'full_name',
               'email', 'phone_number',
               'street_address1', 'street_address2', 'town_or_city',
               'county', 'postcode', 'country',
