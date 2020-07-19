@@ -9,7 +9,7 @@ import uuid
 class Purchase(models.Model):
     purchase_number = models.CharField(max_length=32, editable=False)
     # user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-    #                                 related_name='orders')
+    #                                 related_name='purchase')
     full_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=20)
