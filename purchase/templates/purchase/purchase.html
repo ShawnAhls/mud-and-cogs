@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-
+{% load basket_tools %} 
 
 {% block content %}
 <section>
@@ -19,19 +19,20 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col">
-                <form action="{% url 'purchase' %}" method="POST" id="payment-form">
+            <div class="col-lg-6">
+                <form action="{% url 'purchase' %}" method="POST" id="">
                     {% csrf_token %}
-                    <fieldset>    
-                        {{ purchase_form.full_name | as_crispy_field }}
-                        {{ purchase_form.email | as_crispy_field }}
-                        {{ purchase_form.phone_number | as_crispy_field }}
-                        {{ purchase_form.street_address1 | as_crispy_field }}
-                        {{ purchase_form.street_address2 | as_crispy_field }}
-                        {{ purchase_form.town_or_cit | as_crispy_field }}
-                        {{ purchase_form.county | as_crispy_field }}
-                        {{ purchase_form.postcode | as_crispy_field }}
-                        {{ purchase_form.country | as_crispy_field }}
+                    <fieldset class="rounded"> 
+                            <legend class="fieldset-label small px-2 w-auto"></legend>
+                            {{ purchase_form.full_name | as_crispy_field }}
+                            {{ purchase_form.email | as_crispy_field }}
+                            {{ purchase_form.phone_number | as_crispy_field }}
+                            {{ purchase_form.street_address1 | as_crispy_field }}
+                            {{ purchase_form.street_address2 | as_crispy_field }}
+                            {{ purchase_form.town_or_city | as_crispy_field }}
+                            {{ purchase_form.county | as_crispy_field }}
+                            {{ purchase_form.postcode | as_crispy_field }}
+                            {{ purchase_form.country | as_crispy_field }}
                     </fieldset>
                 </form>
             </div>
@@ -39,6 +40,13 @@
     </div>
 </section>
 
-     
-      
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key | json_script:"id_stripe_public_key" }}
+    {{ client_secret | json_script:"id_client_secret" }}
+    <script src="{% static 'purchase/js/stripe_elements.js' %}"></script>
+
+
+{% endblock%}
