@@ -24,7 +24,7 @@
         <hr>
         <div class="row">
             <div class="col-sml-12 col-lg-6">
-                <form action="{% url 'purchase' %}" method="POST" id="">
+                <form action="{% url 'purchase' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded"> 
                             <legend class="fieldset-label small px-2 w-auto"></legend>
