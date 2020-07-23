@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-{% load basket_tools %} 
+{% load basket_tools %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'purchase/css/checkout.css' %}">
+{% endblock %}
 
 {% block content %}
 <section>
@@ -19,7 +23,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sml-12 col-lg-6">
                 <form action="{% url 'purchase' %}" method="POST" id="">
                     {% csrf_token %}
                     <fieldset class="rounded"> 
@@ -34,6 +38,28 @@
                             {{ purchase_form.postcode | as_crispy_field }}
                             {{ purchase_form.country | as_crispy_field }}
                     </fieldset>
+                    <hr>
+                    <fieldset class="px-3">
+                        <h4 class="text-muted px-2 w-auto">Payment</h4>
+                        <div class="mb-3" id="card-element"></div>
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                    </fieldset>
+                    
+                    <div class="submit-button text-right mt-5 mb-2">                    
+						<a href="{% url 'basket' %}" class="btn">
+							<h6>Adjust Basket</h6>
+						</a>
+						<button id="submit-button" class="btn">
+							<h6>Complete Purchase</h6>
+						</button>
+						<p class="small text-danger my-0">
+							<span class="icon">
+								<i class="fas fa-exclamation-circle"></i>
+							</span>
+							<span>You will be charged <strong>£{{ total|floatformat:2 }}</strong> on your card.</span>
+						</p>
+					</div>
                 </form>
             </div>
         </div>
