@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .forms import PurchaseForm
 
-import stripe
-
 
 def purchase(request):
     basket = request.session.get('basket', {})
