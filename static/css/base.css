@@ -122,3 +122,9 @@ p {
 .shopping {
     font-family: 'Permanent Marker';
 }
+
+@media (min-width: 320px) {
+    .bike {
+        margin-bottom: 10px
+    }
+}
