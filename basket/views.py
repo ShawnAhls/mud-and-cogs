@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
+from parts.models import Parts
 
 
 def basket(request):
@@ -6,7 +8,6 @@ def basket(request):
 
 
 def add_to_basket(request, item_id):
-
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
@@ -19,6 +20,20 @@ def add_to_basket(request, item_id):
     return render(request, "basket/basket.html")
 
 
-def update_qty_basket(request, item_id):
+def update_basket(request, item_id):
+    part = get_object_or_404(Parts, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+        messages.success(request,
+                         (f'Updated {part.name}'
+                          'quantity to {basket[item_id]}'))
+    else:
+        basket.pop(item_id)
+        messages.success(request,
+                         (f'Removed {part.name} from your basket'))
+
     request.session['basket'] = basket
-    return render(request, "basket/basket.html")
+    return redirect(reverse('basket'))
