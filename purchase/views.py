@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .forms import PurchaseForm
+from basket.contexts import contents
+from django.conf import settings
+
+import stripe
 
 
 def purchase(request):
@@ -10,12 +14,25 @@ def purchase(request):
                        "Your have an empty basket")
         return redirect(reverse('parts'))
 
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    current_basket = contents(request)
+    total = current_basket['total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+
+    print(intent)
+
     purchase_form = PurchaseForm()
     template = 'purchase/purchase.html'
     context = {
         'purchase_form': purchase_form,
-        'stripe_public_key': 'pk_test_51H7RYPI3nLn57BKyVjCEQsZMcFUK9Z0bADPxPi4pga5DEe38uagPRTi5pPl2rrHkTQ1ndgyjtJvOBwmHe61gKm4b001MN6iDcG',
-        'client_secret': 'test client secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)

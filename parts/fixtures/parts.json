@@ -61,7 +61,7 @@
         "description": "This Hope Floating Disc Brake Rotor is precision laser cut from a custom sheet of steel and then heat-treated to produce a high-end, durable disc rotor. Made with a wider braking surface for use with other brakes available on the market, the Hope Floating Disc Brake Rotor is suitable for performance-oriented riders and those seeking a new alternative disc brake rotor.", 
         "price": 45.00,
         "category": 2,
-        "image": "HOpeFloatingDisc.jpg",
+        "image": "HopeFloatingDisc.jpg",
         "url_of_image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcemy6WcA2gUCAYQ_1XtrcgZcv4-XxKWRKz6BWS1aCaS4fKLKOh77TxRDoFW2M1wJRS74Tp220XQ&usqp=CAc"}},
     {"pk": 9, "model": "parts.parts", 
      "fields": {
@@ -93,6 +93,6 @@
         "description": "Completely redesigned to bring you enhanced cornering control, acceleration and braking, the Maxxis Minion DHR II Tyre - EXO - TR model will make your bike ready to take on the most challenging trails. Adopting the same larger shoulder knobs as seen on the Minion DHF mountain bike tyre, it also has a heavily ramped centre tread for fast rolling and straight tracking under hard braking. Combine your Minion DHR II at the rear with a Minion DHF up front for the ultimate trail ready setup.", 
         "price": 33.49,
         "category": 3,
-        "image": "MaxxisMInionDHR.jpg",
+        "image": "MaxxisMinionDHR.jpg",
         "url_of_image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRQ2E2i3Yc2HlKoDvsW_E5HrcH94IwVS5sXCbZHO5kQTKWz9YduMyM_oBqwoWCdtw&usqp=CAc"}}
 ]   
