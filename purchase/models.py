@@ -26,7 +26,7 @@ class Purchase(models.Model):
 
     def refresh_total(self):
         self.total = self.purchasepart.aggregate(
-            Sum('purchasepart_total'))['purchasepart_total__sum']
+            Sum('purchasepart_total'))['purchasepart_total__sum'] or 0
         self.save()
 
     def _purchase_number_create(self):

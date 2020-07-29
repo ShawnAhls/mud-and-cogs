@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, reverse, get_object_or_404, redirect
 from django.contrib import messages
 from .forms import PurchaseForm
 from basket.contexts import contents
@@ -11,6 +11,9 @@ import json
 
 
 def purchase(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+
     if request.method == 'POST':
         basket = request.session.get('basket', {})
 
@@ -33,25 +36,9 @@ def purchase(request):
             purchase.stripe_pid = pid
             purchase.original_basket = json.dumps(basket)
             purchase.save()
-            for item_id, item_data in basket.items():
-                try:
-                    parts = Parts.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        purchase_line_item = PurchasePart(
-                            purchase=purchase,
-                            parts=parts,
-                            quantity=item_data,
-                        )
-                        purchase_line_item.save()
-                except Parts.DoesNotExist:
-                    messages.error(request, (
-                        "A part in your basket can not be "
-                        "found in our database. "
-                        "Please contact our Customer Helpline")
-                    )
-                    purchase.delete()
-            return render(reverse('purchase',
-                                  args=[purchase.purchase_number]))
+
+            return redirect('purchase_successful',
+                            args=[Purchase.purchase_number])
         else:
             messages.error(request, ('There was an error with your form. '
                                      'Please ensure your information'
@@ -60,10 +47,7 @@ def purchase(request):
         basket = request.session.get('basket', {})
         if not basket:
             messages.error(request, "Your have an empty basket")
-        return redirect(reverse('purchase'))
 
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
     current_basket = contents(request)
     total = current_basket['total']
     stripe_total = round(total * 100)
