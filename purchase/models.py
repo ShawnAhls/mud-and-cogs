@@ -2,19 +2,16 @@ from django.db import models
 from django.db.models import Sum
 from parts.models import Parts
 from django_countries.fields import CountryField
-# from profiles.models import UserProfile
 import uuid
 
 
 class Purchase(models.Model):
     purchase_number = models.CharField(max_length=32, editable=False)
-    # user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-    #                                 related_name='purchase')
     full_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=20)
     street_address1 = models.CharField(max_length=80)
-    street_address2 = models.CharField(max_length=80)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
     town_or_city = models.CharField(max_length=40)
     county = models.CharField(max_length=80)
     postcode = models.CharField(max_length=20)

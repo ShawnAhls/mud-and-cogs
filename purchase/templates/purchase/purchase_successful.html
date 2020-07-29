@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/stripe.css' %}">
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Thank you for your purchase.</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h5 class="text-muted">Your purchase number will be {{ purchase.purchase_number }}. 
+                A confirmation email will be sent.</h5>
+            </div>
+        </div>
+        <hr>
+    </div>
+</section>
+
+{% endblock %}
