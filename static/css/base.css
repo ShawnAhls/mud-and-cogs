@@ -51,10 +51,19 @@ h2,h3,h4,h5,h6 {
 }
 
 .card-title {
-    color: rgb(250, 248, 248);
+    color: black;
     font-family: 'Permanent Marker';
 }
 
+a {
+    font-family: 'Permanent Marker';
+    color: black;
+}
+
+a:hover {
+    font-family: 'Permanent Marker';
+    color: black;
+}
 
 /* Gear cards */
 /* Title */
