@@ -14,8 +14,8 @@ def parts(request):
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         parts = parts.filter(queries)
 
-    if 'category' in request.GET:
-        category = request.GET['category']
+    if 'categories' in request.GET:
+        category = request.GET['categories']
         parts = parts.filter(category__name__in=category)
         category = Category.objects.filter(name__in=category)
 
