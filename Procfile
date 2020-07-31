@@ -1,0 +1,1 @@
+web: gunicorn mug-and-cogs.wsgi:application
