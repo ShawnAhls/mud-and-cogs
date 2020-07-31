@@ -20,8 +20,8 @@ class PurchaseForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'town_or_city': 'Town or City',
-            'postcode': 'Postal Code',
             'county': 'County, State or Locality',
+            'postcode': 'Postal Code',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True

@@ -4,11 +4,11 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=150)
 
-    def __str__(self):
-        return self.name
-
     class Meta:
         verbose_name_plural = 'Category'
+
+    def __str__(self):
+        return self.name
 
 
 class Parts(models.Model):
@@ -20,8 +20,8 @@ class Parts(models.Model):
     image = models.ImageField(blank=True)
     url_of_image = models.URLField(max_length=1100)
 
-    def __str__(self):
-        return self.name
-
     class Meta:
         verbose_name_plural = 'Parts'
+
+    def __str__(self):
+        return self.name

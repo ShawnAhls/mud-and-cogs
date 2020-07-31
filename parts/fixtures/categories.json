@@ -1,4 +1,0 @@
-[{"pk": 1, "model": "parts.categories", "fields": {"name": "Drivetrain Component"}},
- {"pk": 2, "model": "parts.categories", "fields": {"name": "Brakes"}},
- {"pk": 3, "model": "parts.categories", "fields": {"name": "Tyres"}}
-]  

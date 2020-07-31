@@ -36,36 +36,45 @@ def purchase(request):
             purchase.stripe_pid = pid
             purchase.original_basket = json.dumps(basket)
             purchase.save()
+            for item_id, item_data in basket.items():
+                part = Parts.objects.get(id=item_id)
+                isinstance(item_data, int)
+                purchase = PurchasePart(
+                    purchase=purchase,
+                    part=part,
+                    quantity=item_data,
+                )
+                purchase.save()
 
-            return redirect('purchase_successful',
-                            args=[Purchase.purchase_number])
+                return redirect(reverse('purchase_successful',
+                                args=[purchase.purchase_number]))
         else:
             messages.error(request, ('There was an error with your form. '
-                                     'Please ensure your information'
-                                     'is correct.'))
+                                    'Please ensure your information'
+                                    'is correct.'))
     else:
         basket = request.session.get('basket', {})
         if not basket:
             messages.error(request, "Your have an empty basket")
 
-    current_basket = contents(request)
-    total = current_basket['total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-        )
+        current_basket = contents(request)
+        total = current_basket['total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+                amount=stripe_total,
+                currency=settings.STRIPE_CURRENCY,
+            )
 
-    purchase_form = PurchaseForm()
-    template = 'purchase/purchase.html'
-    context = {
-        'purchase_form': purchase_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
-    }
+        purchase_form = PurchaseForm()
+        template = 'purchase/purchase.html'
+        context = {
+            'purchase_form': purchase_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+        }
 
-    return render(request, template, context)
+        return render(request, template, context)
 
 
 def purchase_successful(request, purchase_number):

@@ -11,7 +11,7 @@ class Purchase(models.Model):
     email = models.EmailField(max_length=254)
     phone_number = models.CharField(max_length=20)
     street_address1 = models.CharField(max_length=80)
-    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    street_address2 = models.CharField(max_length=80, blank=True)
     town_or_city = models.CharField(max_length=40)
     county = models.CharField(max_length=80)
     postcode = models.CharField(max_length=20)
