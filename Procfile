@@ -1,1 +1,1 @@
-web: gunicorn mug-and-cogs.wsgi:application
+web: gunicorn mud-and-cogs.wsgi:application
