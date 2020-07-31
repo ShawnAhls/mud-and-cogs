@@ -112,16 +112,13 @@ WSGI_APPLICATION = 'mud_and_cogs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://vxyljdnwdjaflz:c67e7bd13ec9c5e29ad806a6db1eb65f86dfc5599559a142d72440a472c431c7@ec2-46-137-124-19.eu-west-1.compute.amazonaws.com:5432/d2ep072u00tksf')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

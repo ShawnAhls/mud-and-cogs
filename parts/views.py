@@ -6,7 +6,7 @@ from django.db.models import Q
 def parts(request):
 
     parts = Parts.objects.all()
-    category = None
+    categories = None
     query = None
 
     if 'q' in request.GET:
@@ -15,14 +15,14 @@ def parts(request):
         parts = parts.filter(queries)
 
     if 'category' in request.GET:
-        category = request.GET['category']
-        parts = parts.filter(category__name__in=category)
-        category = Category.objects.filter(name__in=category)
+        categories = request.GET['category']
+        parts = parts.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     context = {
         'parts': parts,
         'lookup': query,
-        'current_category': category,
+        'current_category': categories,
     }
 
     return render(request, "parts/parts.html", context)
