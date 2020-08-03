@@ -3,8 +3,7 @@ from django.contrib import messages
 from .forms import PurchaseForm
 from basket.contexts import contents
 from django.conf import settings
-from parts.models import Parts
-from .models import Purchase, PurchasePart
+from .models import Purchase
 
 import stripe
 import json
@@ -36,22 +35,13 @@ def purchase(request):
             purchase.stripe_pid = pid
             purchase.original_basket = json.dumps(basket)
             purchase.save()
-            for item_id, item_data in basket.items():
-                part = Parts.objects.get(id=item_id)
-                isinstance(item_data, int)
-                purchase = PurchasePart(
-                    purchase=purchase,
-                    part=part,
-                    quantity=item_data,
-                )
-                purchase.save()
 
-                return redirect(reverse('purchase_successful',
-                                args=[purchase.purchase_number]))
+            return redirect(reverse('purchase_successful',
+                            args=[purchase.purchase_number]))
         else:
             messages.error(request, ('There was an error with your form. '
-                                    'Please ensure your information'
-                                    'is correct.'))
+                                     'Please ensure your information'
+                                     'is correct.'))
     else:
         basket = request.session.get('basket', {})
         if not basket:
