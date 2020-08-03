@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'home',
     'purchase',
     'basket',
-    'register',
     'signin',
     'parts',
     'django.contrib.sites',
@@ -166,8 +165,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
