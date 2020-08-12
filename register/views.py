@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def signin(request):
-    return render(request, "signin/signin.html")
+def register(request):
+    return render(request, "register/register.html")
