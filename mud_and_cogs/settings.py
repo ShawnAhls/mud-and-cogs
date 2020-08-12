@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'home',
     'purchase',
     'basket',
+    'register',
     'signin',
     'parts',
     'django.contrib.sites',
