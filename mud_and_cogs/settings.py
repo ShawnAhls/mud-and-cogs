@@ -64,6 +64,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'templates', 'purchase/purchase.html'),
             os.path.join(BASE_DIR, 'templates', 'parts/parts.html'),
             os.path.join(BASE_DIR, 'templates', 'basket/basket.html'),
+            os.path.join(BASE_DIR, 'templates', 'register/register.html'),
             os.path.join(BASE_DIR, 'templates', 'signin/signin.html'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
