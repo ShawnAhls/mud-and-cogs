@@ -1,7 +1,6 @@
 from django.db import models
 from django.db.models import Sum
 from parts.models import Parts
-from django.config import setting
 from django_countries.fields import CountryField
 import uuid
 
