@@ -10,6 +10,7 @@ def parts(request):
     query = None
 
     if request.GET:
+
         if 'category' in request.GET:
             categories = request.GET['category']
             parts = parts.filter(category__name__in=categories)
