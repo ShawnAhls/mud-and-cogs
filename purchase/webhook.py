@@ -21,16 +21,21 @@ def webhook(request):
             payload, sig_header, wh_secret
         )
     except ValueError as e:
-        return HttpResponse(status=400)
+        return HttpResponse(content=e, status=400)
     except stripe.error.SignatureVerificationError as e:
-        return HttpResponse(status=400)
+        return HttpResponse(content=e, status=400)
+    except Exception as e:
+        return HttpResponse(content=e, status=400)
 
-    if event.type == 'payment_intent.succeeded':
-        payment_intent = event.data.object
-    elif event.type == 'payment_method.attached':
-        payment_method = event.data.object
-    else:
-        return HttpResponse(status=400)
+    handler = StripeWH_Handler(request)
+    event_type = event['type']
 
-    print('Success!')
-    return HttpResponse(status=200)
+    event_map = {
+        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
+        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+    }
+
+    event_handler = event_map.get(event_type, handler.handle_event)
+    response = event_handler(event)
+
+    return response
