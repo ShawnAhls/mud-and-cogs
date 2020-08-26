@@ -14,34 +14,26 @@ Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the 
 
 <h3>UX</h3>
 
-<strong></strong> - The user can register themselves by the registration page where they are ask for an username and password.
-                       If an username is already registered a message will appear to inform the user to choose a different 
-                       username. When the user enters their password and misspell their password, a message will appear to inform 
-                       them that their password does not match.
+<strong>Categories</strong> - The user can use the category links on the navbar to move between the all the parts or one of the other categories:
+                              Drivetrain, Brakes, Tyres. Under each of these categories the user will see only the parts of that aparticular category.
 
-<strong></strong> - The user can click on the Sign in button, which will take them to the sign in page and sign themselves in by
-                  filling in the sign in form. If the user does not exists they will be redirected to the registration page to
-                  register themselves. The user can sign in with their details and if the user misspell his username or password,
-                  a message will appear to inform them that their details does not match.
+<strong>Search Bar</strong> - The user can click on the Search bar to search for any of the items on the website, by typing in keywords. for example 
+                              Brakes, Tyres or chain and then click on the search button. All the items with that keyword will appear on the page below
+                              for the user to look at and choose whether they want to add any of those items to their basket and how many of the item they want.
+                                                
+<strong>Add or Remove Quantity</strong> - When the user is looking at an item, they can add more and remove the amount of the item they want to purchase.
+                                          Once they have the choosen the correct they want and can click on the add to basket button to add the amount of
+                                          items they want to purchase. Once they have clicked on the add to basket button the amount will appear under the
+                                          basket and the item/s will appear in the basket.
 
-<strong></strong> - Once user has singed in and has used the website and they want to leave after cooking an amazing meal, adding,
-                   editing or deleting of an recipe; the user can click on the Sign out button which will appear if they are signed in.
-                   By clicking on the sign out button the user session will end.
+<strong>Basket</strong> - In the basket the user will find all the item/s they have added to the basket will they were shopping. From the user can either add
+                          more items by changing the quantity of the items or click on the keep shopping button to add any other item/s to the basket.
+                          Once they are finished shopping the user can click on the secure payment button and they will be taken to a payment page.
 
-<strong></strong> - An user can click on the recipes name that is displayed on the home page, that will take them to that recipe only.
-                    If the user wants to view any other recipe they need to click on the Category and all the recipes under that category
-                    will appear on the category recipe page.
-
-<strong></strong> - Once the user has signed in and wants to add their favourite recipe their can do that by clicking on the Add recipe button,
-               which takes them to the add recipe page. Here a user can fill in a form which consists of the category, recipes name,
-               image of recipe, Ingredients, Method, prep-time, cooking time and serving how many people.
-
-<strong></strong> - Once the user has signed in and wants to edit their favourite recipe their can do that by clicking on the edit button which 
-                takes them to the edit recipe page. Here a user can fill in a form which consists of the category, recipes name , image of recipe,
-                Ingredients, Method, prep-time, cooking time and serving how many people.
-
-<strong>Delete recipe</strong> - If an user decides to delete a reicpe, they can do so by clicking on the delete button and that recipe will be deleted from
-                the database. Then a message will appear stating the recipe has been deleted. 
+<strong>Secure Payment</strong> - When the user is ready to do the payment for all the items they want and clicked on the Secure Payment button.
+                                  the user will be taken to a page where they will have to fill in a form with all their details, to where the parcel
+                                  needs to be send. At the end of the page the user will need to fill in their card details to make a secure payment.
+                                  If any of their details are incorrect the form or card will show the error where the error is or in red. 
 
 <hr/> 
 
