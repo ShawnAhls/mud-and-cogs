@@ -1,9 +1,12 @@
 <h2>Mud & Cogs</h2>
 
-Mud & Cogs is an ecom website where user can view and purchase mountain bike parts for their mountain bike.
-The user browse three different parts of the mountain bike, the are: Drivetrain components( gears), Brakes and
-Tyreste recs. When the user has found the part they are looking for, they can add
-add an image of the recipe they are adding, but if they don't a default image will appear in its place.
+Mud & Cogs is an ecom website where an user can view and purchase mountain bike parts for their mountain bike.
+The user can browse three different parts of the mountain bike, they are: Drivetrain components( gears), Brakes and
+Tyres. When the user has found the part they are looking for, they can add the part to the basket. Once they have
+complete their shopping, they can click on the basket and view all the parts they have added to the basket. If they
+happy with their shopping they can complete their order by clicking on the complete order link and complete the form
+with their details and card details. When that is completed they will taking to a page saying the payment has been 
+successful and give their order number.
 
 Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the database schema.
 
@@ -11,29 +14,29 @@ Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the 
 
 <h3>UX</h3>
 
-<strong>Registration of user</strong> - The user can register themselves by the registration page where they are ask for an username and password.
+<strong></strong> - The user can register themselves by the registration page where they are ask for an username and password.
                        If an username is already registered a message will appear to inform the user to choose a different 
                        username. When the user enters their password and misspell their password, a message will appear to inform 
                        them that their password does not match.
 
-<strong>Sign in of user</strong> - The user can click on the Sign in button, which will take them to the sign in page and sign themselves in by
+<strong></strong> - The user can click on the Sign in button, which will take them to the sign in page and sign themselves in by
                   filling in the sign in form. If the user does not exists they will be redirected to the registration page to
                   register themselves. The user can sign in with their details and if the user misspell his username or password,
                   a message will appear to inform them that their details does not match.
 
-<strong>Sign out of user</strong> - Once user has singed in and has used the website and they want to leave after cooking an amazing meal, adding,
+<strong></strong> - Once user has singed in and has used the website and they want to leave after cooking an amazing meal, adding,
                    editing or deleting of an recipe; the user can click on the Sign out button which will appear if they are signed in.
                    By clicking on the sign out button the user session will end.
 
-<strong>Viewing of recipe</strong> - An user can click on the recipes name that is displayed on the home page, that will take them to that recipe only.
+<strong></strong> - An user can click on the recipes name that is displayed on the home page, that will take them to that recipe only.
                     If the user wants to view any other recipe they need to click on the Category and all the recipes under that category
                     will appear on the category recipe page.
 
-<strong>Add a recipe</strong> - Once the user has signed in and wants to add their favourite recipe their can do that by clicking on the Add recipe button,
+<strong></strong> - Once the user has signed in and wants to add their favourite recipe their can do that by clicking on the Add recipe button,
                which takes them to the add recipe page. Here a user can fill in a form which consists of the category, recipes name,
                image of recipe, Ingredients, Method, prep-time, cooking time and serving how many people.
 
-<strong>Edit a recipe</strong> - Once the user has signed in and wants to edit their favourite recipe their can do that by clicking on the edit button which 
+<strong></strong> - Once the user has signed in and wants to edit their favourite recipe their can do that by clicking on the edit button which 
                 takes them to the edit recipe page. Here a user can fill in a form which consists of the category, recipes name , image of recipe,
                 Ingredients, Method, prep-time, cooking time and serving how many people.
 
