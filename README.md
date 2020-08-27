@@ -8,7 +8,7 @@ happy with their shopping they can complete their order by clicking on the compl
 with their details and card details. When that is completed they will taking to a page saying the payment has been 
 successful and give their order number.
 
-Please <a href="static/creations/Images/database.pdf">Click Here</a> to see the database schema.
+Please <a href="">Click Here</a> to see the database schema.
 
 <hr/> 
 
@@ -43,18 +43,18 @@ I have used the a program called Figma that helped design the pages and this mak
 The user can see and read everything clearly without having to do an indepth search for what the are looking for. The approach to the design was to make
 the website easy to navigate and inviting so anyone can use this with ease.
 
-Please <a href="static/creations/Images/My-Yummy-Dishes.pdf">Click Here</a> to see the design.
+Please <a href="">Click Here</a> to see the design.
 
 <hr/> 
 
 <h3>Features</h3>
 
 <ul>
-    <li>Dropdown menu for all the categories.</li>
-    <li>Registration and Sign in links for the user to register or sign in.</li>
-    <li>On the home page an Add recipe link for the user to add more recipes to the database.</li>
-    <li>The ability for the user to edit and delete recipes on the database.</li>
-    <li>Each recipe can be displayed on their own page, to list everything about the recipe.</li>
+    <li>Navbar with categories, when clicked should take you to the category you clicked on.</li>
+    <li>Search bar where keywords are used to find items in the database.</li>
+    <li>Add to basket link, where you can add items to your basket.</li>
+    <li>Keep shopping button, that will return you to the home page.</li>
+    <li>Secure payment, which will take the user to a form that needs to be filled in.</li>
 </ul>    
 
 <hr/> 
@@ -69,12 +69,12 @@ Please <a href="static/creations/Images/My-Yummy-Dishes.pdf">Click Here</a> to s
     </ul>
 <h4>Database</h4>
     <ul>
-        <a href="https://www.mongodb.com/">MongoDB</a>: was used for the database.
+        <a href="https://docs.python.org/3/library/sqlite3.html">Sqlite3</a>: was used for the database.
     </ul>   
 <h4>Frameworks</h4>
     <ul>
-        <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>: was used for creating routes and the rendering of the HTML5 templates.</li>
-        <li><a href="https://getbootstrap.com/">Bootstrap</a>: was used for the navigation, login templates and responsiveness.</li>
+        <li><a href="https://www.djangoproject.com/">Django</a>: was used for creating routes and the rendering of the HTML5 templates.</li>
+        <li><a href="https://getbootstrap.com/">Bootstrap</a>: was used for the navigation and responsiveness.</li>
     </ul>
 <h4>Tools</h4>
     <ul>
