@@ -84,20 +84,14 @@ Please <a href="">Click Here</a> to see the design.
         <li><a href="https://www.heroku.com/">Heroku</a>: was used for the deployment of the website.</li>
     </ul>
 
-
 <hr/>
 
 <h3>Testing<h3>
 
 <h4>Validation of Code</h4>
 
-With the validation of the code using the following two validation sites. Using W3C validation all the HTML that was written was correct, but all the Flask
+With the validation of the code using the following two validation sites. Using W3C validation all the HTML that was written was correct, but all the Django
 inputs come up with errors. As this is not part the HTML5 language. Using the W3C CSS validation for the CSS3 that was written, the result was No Errors Found.
-
-<h4>Automated Testing</h4>
-
-Created a test.py file to test each route that was created in the app.py file. The test.py file uses the unittest that runs each route, when the following 
-is entered in a terminal python3 test.py. Once that is entered the unittest will run.
 
 <h4>Manual Testing</h4>
 <ol>
@@ -111,69 +105,44 @@ is entered in a terminal python3 test.py. Once that is entered the unittest will
         </ul>
     </li>
     <li>
-        <h5>Sign In</h5>
-            <h6>Correct User details</h6>
+        <h5>Mud & Cogs link</h5>
             <ul>
                 <li>
-                Clicked on the Sign In link,
-                Sign in page loaded up and entered in my username and password,
-                The Sign in page will redirected to the Home page.
-                </li>    
+                Mud & Cogs link, when you click on any of the links and go off the home page. 
+                Click on the Mud & Cogs and that will redirect back to the home page.
+                </li>  
             </ul>
-            <h6>Incorrect User details</h6>
+    </li>
+    <li>
+        <h5>Navbar links</h5>
             <ul>
                 <li>
-                Clicked on the Sign In link,
-                Sign in page loaded up and entered in my username and incorrect password,
-                The Sign In page prompt a message inform the user that their details are incorrect.
-                The page will not redirect to any other page.
+                Clicked on the all parts link.
+                Will open a new page with all the parts displaying in their own box.
+                Each box will display an item image, item name and item price.
                 </li>    
             </ul>
     </li>
     <li>
-        <h5>Registration</h5>
-            <h6>Correct User details</h6>
+        <h5>Part links</h5>
             <ul>
                 <li>
-                Clicked on the Registration link,
-                Registration page loaded up and entered in my username and password,
-                A confirmation password is required to compare passwords,
-                The Registration page will redirected to the Home page.
-                </li>    
-            </ul>
-            <h6>Incorrect User details</h6>
-            <ul>
-                <li>
-                Clicked on the Registration link,
-                Registration page loaded up and entered in my username and password,
-                A confirmation password is required to compare passwords,
-                If passwords does not match a message will prompt the user their passwrods does not match.
-                The Registration page will not redirect to any other page.
+                Clicked on one part and a new page opens with the part details.
+                Where I can update the amount of the part I am going to buy.
+                Clicked on the 'Keep shopping' button, which will take me back to the home page.
+                Clicked on the 'Add to basket' button, which will take me to the basket page.
                 </li>    
             </ul>
     </li>
     <li>
-        <h5>Add Recipe</h5>
+        <h5>Basket page</h5>
             <ul>
                 <li>
-                Clicked on the Add recipe link,
-                Add recipe page loaded up and allows you to enter the new recipe details,
-                Submitted the from blank and the page does request you to fill in the from,
-                Filled out the from and submitted the from,
-                Add recipe page will redirect you to the display recipes page,
-                Opened the recipe and the whole from was filled out.
-                </li>    
-            </ul>
-    </li>
-    <li>
-        <h5>Edit Recipe</h5>
-            <ul>
-                <li>
-                Clicked on the Edit recipe button,
-                Edit recipe page loaded up and allows you to enter the new details to a recipe and the recipe is already populated,
-                Filled out the from and submitted the from,
-                Edit recipe page will redirect you to the display recipes page.
-                Opened the recipe and the whole from was filled out.
+                Clicked on the basket link.
+                Will redirect to the basket page, where I can see all the parts I want to buy.
+                Or if there is no parts in the basket, it will display ' Your basket is empty'.
+                Clicked on the 'Keep shopping' link and redirected back to the home page and I can keep on shopping.
+                Or clicked on the 'Secure payment' button and redirect to the payment page.
                 </li>    
             </ul>
     </li>
