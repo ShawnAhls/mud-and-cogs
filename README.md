@@ -69,7 +69,8 @@ Please <a href="">Click Here</a> to see the design.
     </ul>
 <h4>Database</h4>
     <ul>
-        <a href="https://docs.python.org/3/library/sqlite3.html">Sqlite3</a>: was used for the database.
+        <li><a href="https://docs.python.org/3/library/sqlite3.html">Sqlite3</a>: was used for the database.</li>
+        <li><a href="https://aws.amazon.com/console/">AWS</a>: was used for the storaged of the images.</li>
     </ul>   
 <h4>Frameworks</h4>
     <ul>
@@ -82,10 +83,7 @@ Please <a href="">Click Here</a> to see the design.
         <li><a href="https://www.figma.com/">Figma</a>: was used for the design layout of the website.</li>
         <li><a href="https://www.heroku.com/">Heroku</a>: was used for the deployment of the website.</li>
     </ul>
-<h4>Testing</h4>
-    <ul>
-        <a href="https://en.wikipedia.org/wiki/Unit_testing">Unittest</a>: was used for the individual testing of each route.
-    </ul>
+
 
 <hr/>
 
