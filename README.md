@@ -41,7 +41,9 @@ I have used the a program called Figma that helped design the pages and this mak
 The user can see and read everything clearly without having to do an indepth search for what the are looking for. The approach to the design was to make
 the website easy to navigate and inviting so anyone can use this with ease.
 
-Please <a href="">Click Here</a> to see the design.
+Please <a href="static/creations/images/MUD & COGS(1).pdf">Click Here</a> to see the design of the Home page.
+Please <a href="static/creations/images/MUD & COGS(2).pdf">Click Here</a> to see the design of all the parts.
+Please <a href="static/creations/images/MUD & COGS(3).pdf">Click Here</a> to see the design of the part details.
 
 <hr/> 
 
