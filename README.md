@@ -8,8 +8,6 @@ happy with their shopping they can complete their order by clicking on the compl
 with their details and card details. When that is completed they will taking to a page saying the payment has been 
 successful and give their order number.
 
-Please <a href="">Click Here</a> to see the database schema.
-
 <hr/> 
 
 <h3>UX</h3>
@@ -147,23 +145,15 @@ inputs come up with errors. As this is not part the HTML5 language. Using the W3
             </ul>
     </li>
     <li>
-        <h5>Delete Recipe</h5>
+        <h5>Secure payment</h5>
             <ul>
                 <li>
-                Clicked on the Delete recipe button,
-                The recipe is deleted form the database,
-                The Delete recipe page will redirect you to the display recipe page,
-                A message will appear stating the recipe has been deleted.
-                </li>    
-            </ul>
-    </li>
-    <li>
-        <h5>Sign Out</h5>
-            <ul>
-                <li>
-                Clicked on the Sign out link,
-                The Sign Out will redirect you to the Home page,
-                A message will appear stating You have been Signed Out! Good Bye.
+                When the 'Secure payment' button is clicked.
+                A new page will open, which I need to fill in all my details.
+                At the end the page does request you the fill in your card details.
+                Which you can use the following with stripe as a example (4242 4242 4242 4242 04/42 42424).
+                When everything is filled in and there is no errors on the form by clicking on the 'Secure payment'
+                button, a new page will appear with your order number and a thank you message.
                 </li>    
             </ul>
     </li> 
@@ -175,13 +165,13 @@ inputs come up with errors. As this is not part the HTML5 language. Using the W3
 
 I used the Heroku app to deploy my application and I deployed in the following way:
 <ol>
-    <li>I created my app under my-yummy-dishes</li>
+    <li>I created my app under mud-and-cogs</li>
     <li>Create a Heroku remote</li>
     <li>Create a Profile and requirements file</li>
     <li>Pushed my new project to Heroku</li>
-    <li>Create a web process using heroku ps:scale web=1 in the terminal</li>
-    <li>Set my config vars IP 0.0.0.0 and the PORT 8080</li>
-    <li>Set my MONGO_URI in config vars</li>
+    <li>Create a web process using heroku web gunicorn mud_and_cogs.wsgi:application in the terminal</li>
+    <li>Set my config vars with all the Secret Keys for AWS, Stripe and my own.</li>
+    <li>Set my DATABASE_URL in config vars</li>
     <li>Refershed my dyno's</li>
     <li>Opened my app the see if the app is working correctly</li>
 </ol>    
@@ -190,5 +180,5 @@ I used the Heroku app to deploy my application and I deployed in the following w
 
 <h4>Acknowledgements</h4>
 
-The recipes I used was from the BBC recipe website and everyone on the Slack that gave me so much advise. 
-YOUTUBE - PrettyPrint for all his video's how to work with flask, python and MongoDB. 
+The images and descriptions of the parts I got from Chainreaction and everyone on the Slack that gave me so much advise. 
+YOUTUBE - video's how to work with Django, Python and Stripe. 
