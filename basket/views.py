@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse,
 from django.contrib import messages
 from parts.models import Parts
 
@@ -43,4 +43,4 @@ def remove_basket(request, item_id):
     basket.pop(item_id)
 
     request.session['basket'] = basket
-    return render(request, "basket/basket.html")
+    return HttpResponse(status=200)
