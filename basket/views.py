@@ -37,3 +37,10 @@ def update_basket(request, item_id):
 
     request.session['basket'] = basket
     return redirect(reverse('basket'))
+
+
+def remove_basket(request, item_id):
+    basket.pop(item_id)
+
+    request.session['basket'] = basket
+    return render(request, "basket/basket.html")
