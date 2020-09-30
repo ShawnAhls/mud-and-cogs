@@ -35,6 +35,7 @@ def update_basket(request, item_id):
 
 
 def remove_basket(request, item_id):
+    basket = request.session.get('basket', {})
     basket.pop(item_id)
 
     request.session['basket'] = basket
