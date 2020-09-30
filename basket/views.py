@@ -43,4 +43,4 @@ def remove_basket(request, item_id):
     basket.pop(item_id)
 
     request.session['basket'] = basket
-    return HttpResponse(status=200)
+    return redirect(reverse('basket'))
