@@ -12,19 +12,19 @@ class PurchaseAdmin(admin.ModelAdmin):
 
     readonly_fields = ('date', 'purchase_number',
                        'total', 'original_basket',
-                       'stripe_pid')
+                       'stripe_pid',)
 
     fields = ('purchase_number', 'full_name',
               'email', 'phone_number',
               'street_address1', 'street_address2', 'town_or_city',
               'county', 'postcode', 'country',
               'total', 'date', 'original_basket',
-              'stripe_pid')
+              'stripe_pid',)
 
     list_purchases = ('date', 'purchase_number', 'full_name',
-                      'total')
+                      'total',)
 
-    purchased = ('+date')
+    purchased = ('+date',)
 
 
 admin.site.register(Purchase, PurchaseAdmin)
