@@ -11,9 +11,9 @@ def parts(request):
 
     if request.GET:
         if 'category' in request.GET:
-            categories = request.GET['category']
-            parts = parts.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            category = request.GET['category']
+            parts = parts.filter(category__name__in=category)
+            category = Category.objects.filter(name__in=category)
 
         if 'q' in request.GET:
             query = request.GET['q']
