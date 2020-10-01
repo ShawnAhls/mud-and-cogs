@@ -6,11 +6,10 @@ from django.db.models import Q
 def parts(request):
 
     parts = Parts.objects.all()
-    category = None
+    categories = None
     query = None
 
     if request.GET:
-
         if 'category' in request.GET:
             categories = request.GET['category']
             parts = parts.filter(category__name__in=categories)
