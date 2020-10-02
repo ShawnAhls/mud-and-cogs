@@ -96,8 +96,8 @@
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/basket/remove/${itemId}/`;
 
-        $ .post(url, {csrfmiddlewaretoken: csrfToken});
-            done(function() {
+        $ .post(url, csrfToken);
+            .done(function() {
             location.reload();
         });
     })
