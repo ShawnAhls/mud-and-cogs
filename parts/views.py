@@ -10,8 +10,8 @@ def parts(request):
     query = None
 
     if request.GET:
-        if 'category' in request.GET:
-            category = request.GET['category']
+        if 'categories' in request.GET:
+            category = request.GET['categories']
             parts = parts.filter(category__name__in=category)
             category = Category.objects.filter(name__in=category)
 
@@ -23,7 +23,7 @@ def parts(request):
     context = {
         'parts': parts,
         'lookup': query,
-        'category': category,
+        'categories': category,
     }
 
     return render(request, "parts/parts.html", context)
