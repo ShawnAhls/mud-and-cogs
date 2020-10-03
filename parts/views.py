@@ -10,8 +10,8 @@ def parts(request):
     query = None
 
     if request.GET:
-        if 'Category' in request.GET:
-            category = request.GET['Category']
+        if 'category' in request.GET:
+            category = request.GET['category']
             parts = parts.filter(category__name__in=category)
             category = Category.objects.filter(name__in=category)
 
