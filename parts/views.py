@@ -6,14 +6,14 @@ from django.db.models import Q
 def parts(request):
 
     parts = Parts.objects.all()
-    categories = None
+    category = None
     query = None
 
     if request.GET:
         if 'Category' in request.GET:
-            categories = request.GET['Category']
-            parts = parts.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            category = request.GET['Category']
+            parts = parts.filter(category__name__in=category)
+            category = Category.objects.filter(name__in=category)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -23,7 +23,7 @@ def parts(request):
     context = {
         'parts': parts,
         'lookup': query,
-        'Category': categories,
+        'Category': category,
     }
 
     return render(request, "parts/parts.html", context)
