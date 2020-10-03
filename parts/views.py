@@ -6,7 +6,7 @@ from django.db.models import Q
 def parts(request):
 
     parts = Parts.objects.all()
-    categories = None
+    category = None
     query = None
 
     if request.GET:
