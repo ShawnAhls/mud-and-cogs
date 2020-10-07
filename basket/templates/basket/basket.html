@@ -97,7 +97,8 @@
         var url = `/basket/remove/${itemId}/`;
 
     //    var data = {'csrfmiddlewaretoken': csrfToken};
-        $ .post(url, data)
+        // $ .post(url, data)
+        $.post(url, {csrfmiddlewaretoken: CSRFtoken});
             .done(function() {
             location.reload();
         });
