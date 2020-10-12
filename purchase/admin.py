@@ -17,8 +17,8 @@ class PurchaseAdmin(admin.ModelAdmin):
     fields = ('purchase_number', 'full_name',
               'email', 'phone_number',
               'street_address1', 'street_address2', 'town_or_city',
-              'county', 'postcode', 'country',
-              'total', 'date', 'original_basket',
+              'county', 'postcode', 'country', 'date',
+              'total', 'original_basket',
               'stripe_pid',)
 
     list_purchases = ('date', 'purchase_number', 'full_name',
