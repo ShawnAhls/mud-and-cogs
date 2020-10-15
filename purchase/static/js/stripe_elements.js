@@ -48,15 +48,15 @@ form.addEventListener('submit', function(ev) {
         payment_method: {
             card: card,
             client_details: {
-                name:(form.full_name.value.trim()),
-                phone:(form.phone_number.value.trim()),
-                email:(form.email.value.trim()),
+                name: (form.full_name.value.trim()),
+                phone: (form.phone_number.value.trim()),
+                email: (form.email.value.trim()),
                 address:{
-                    line1:(form.street_address1.value.trim()),
-                    line2:(form.street_address2.value.trim()),
-                    city:(form.town_or_city.value.trim()),
-                    county:(form.county.value.trim()),
-                    country:(form.country.value.trim()),
+                    line1: (form.street_address1.value.trim()),
+                    line2: (form.street_address2.value.trim()),
+                    city: (form.town_or_city.value.trim()),
+                    county: (form.county.value.trim()),
+                    country: (form.country.value.trim()),
                 }
             }           
         },
